@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta Charset="ISO-8859-1">
+	<title>Java Trining Students List</title>
+</head>
+
+<body>
+<div class="container-fluid" style="background-color:none;margin-top:50px;">
+	<h1>Employee List</h1>
+	<hr>
+	<a th:href="@{/showNewEmployeeForm}" class="btn btn-primary  mb-3">Add Employees</a>
+	<table border="1" class="table table-striped table-responsive-md">
+		<thead>
+
+			<tr>
+				<th>Employee Id</th>
+				<th>Employee Name</th>
+				<th>Employee Role</th>
+				<th>Employee Email</th>
+				<th>Employee contact</th>
+				<th>Employee Salary</th>
+				<th>Trainer Name</th>
+				<th>Triner Fee</th>
+				<th>Triner Id</th>
+				<th>Subject</th>
+			</tr>
+
+		</thead>
+		<tbody>
+
+			<tr th:each="EmployeeModel : ${ListEmployees}">
+				<td th:text="${EmployeeModel.EmployeeId}"></td>
+				<td th:text="${EmployeeModel.EmployeeName}"></td>
+				<td th:text="${EmployeeModel.EmployeeRole}"></td>
+				<td th:text="${EmployeeModel.EmployeeEmail}"></td>
+				<td th:text="${EmployeeModel.EmployeeContact}"></td>
+				<td th:text="${EmployeeModel.EmployeeSal}"></td>
+				<td th:text="${EmployeeModel.TrainerName}"></td>
+				<td th:text="${EmployeeModel.TrainerSal}"></td>
+				<td th:text="${EmployeeModel.Subject}"></td>
+				<td th:text="${EmployeeModel.TrainerId}"></td>
+				</td>
+			</tr>
+
+		</tbody>
+	</table>
+	</div>
+</body>
+
+</html>
